@@ -1,6 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import happyImg from "../assets/happy.gif"
+import mathPaper from "../assets/math-paper-texture.jpg"
+
+import shyImg from "../assets/shy.gif"
 
 function Container() {
 
@@ -25,14 +29,21 @@ function Container() {
 
 
   return (
-    <div className='container bg-slate-600 h-[700px] w-[1200px] flex flex-col items-center relative'>
+    <div className='container bg-slate-600 h-[700px] w-[1200px] flex flex-col items-center relative'
+        style={{
+            background: `url(${mathPaper})`,
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+        }}
+    >
         <h1 
         className='bg-white h-20 w-1/2 mt-10 text-center flex items-center justify-center text-3xl font-bold'
         >{isYes? "Love you❤": "Wanna go for date?"}</h1>
         
         <div className="imageContainer">
             {/* <img src="./shy.gif" className='h-2/4 mt-20'/> */}
-            {isYes? <img src="./happy.gif" className='h-4/5 mt-20'/> : <img src="./shy.gif" className='h-2/4 mt-20'/>}
+            {isYes? <img src={happyImg} className='h-4/5 mt-20' alt='shy' /> : <img src={shyImg} className='h-2/4 mt-20'/>}
         </div>
 
         {

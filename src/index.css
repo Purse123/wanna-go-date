@@ -7,18 +7,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.main {
-    /* background: url(./math-paper-texture.jpg); */
-    background: url(./paper-texture.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.container {
-    background: url(./math-paper-texture.jpg);
-    /* background: url(./paper-texture.jpg); */
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
